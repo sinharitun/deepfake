@@ -107,8 +107,8 @@ gunicorn
 sqlparse==0.5.0
 
 # PyTorch and dependencies
-torch==2.3.1
-torchvision==0.18.1
+torch==2.0.1
+torchvision==0.15.1
 
 # Core packages
 numpy==1.23.5
