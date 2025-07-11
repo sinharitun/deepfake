@@ -122,7 +122,7 @@ const UploadForm = () => {
 
      
       {isLoading && (
-        <div className="processing-block" ref={processingRef}>
+        <div className="processing-block" >
         
           <div className="processing-animation">
             <Lottie animationData={loadingAnim} loop={true} className="overlay-animation" />
@@ -132,7 +132,7 @@ const UploadForm = () => {
             <p className="processing-text">⏳ Processing video... Please wait.</p>
           </div>
 
-          <div className="fun-facts">
+          <div className="fun-facts" ref={processingRef}>
             <h3>💡 Did you know?</h3>
             <p>{tips[currentTip]}</p>
           </div>
