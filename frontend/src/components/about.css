@@ -1,0 +1,133 @@
+.dark-theme {
+  background: linear-gradient(to right, #1c1f26, #121417);
+  color: #f1f1f1;
+}
+
+.about-container {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding-top: 60px;
+  
+}
+
+.about-nav {
+  width: 250px;
+  padding: 2rem 1rem;
+  padding-top: 90px;
+  background-color: #1e2128;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.about-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-nav li {
+  margin-bottom: 1rem;
+}
+
+.about-nav button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  color: #ccc;
+  transition: background 0.3s, color 0.3s;
+}
+
+.about-nav button:hover,
+.about-nav button:focus {
+  background-color: #007bff;
+  color: white;
+  outline: none;
+}
+
+.about-content {
+  flex: 1;
+  padding: 2rem;
+  padding-top: 70px;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.about-content section {
+  margin-bottom: 4rem;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #9be7ff;
+}
+
+.about-content p,
+.about-content li,
+.about-content ol {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #d3d3d3;
+}
+
+.about-content ul,
+.about-content ol {
+  margin-left: 1.5rem;
+}
+
+.flow-diagram pre {
+  background: #2b2d35;
+  padding: 1rem;
+  border-left: 4px solid #00bcd4;
+  font-family: monospace;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .about-nav button {
+    width: auto;
+    font-size: 0.9rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+    height: auto;
+    overflow-y: visible;
+  }
+}

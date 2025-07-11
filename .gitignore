@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+venv/
+.venv
+media/
+models/
+db.sqlite3
+
+# Node.js
+node_modules/
+build/
+.venv
+
+# VS Code
+.vscode/
