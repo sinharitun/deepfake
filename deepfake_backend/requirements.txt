@@ -89,8 +89,8 @@
 # testpath==0.6.0
 # toml==0.10.2
 # toolz==0.12.1
-# torch==2.3.1
-# torchvision==0.18.1
+torch==2.3.1
+torchvision==0.18.1
 # tornado==6.4.1
 # traitlets==5.14.3
 # tzlocal==5.2
@@ -108,8 +108,8 @@ gunicorn
 sqlparse==0.5.0
 
 # PyTorch and dependencies
-torch==2.0.1
-torchvision==0.15.1
+# torch==2.0.1
+# torchvision==0.15.1
 
 # Core packages
 numpy==1.23.5
