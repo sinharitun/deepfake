@@ -2,10 +2,11 @@ services:
   - type: web
     name: deepfake-backend
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn your_project_name.wsgi:application
+    startCommand: gunicorn deepfake_backend.wsgi
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: your_project_name.settings
+        value: deepfake_backend.settings
       - key: PYTHON_VERSION
         value: 3.9

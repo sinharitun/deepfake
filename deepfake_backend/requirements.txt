@@ -29,6 +29,7 @@
 # google-auth==2.30.0
 # google-auth-httplib2==0.2.0
 # googleapis-common-protos==1.63.2
+# gunicorn
 # httplib2==0.22.0
 # idna==3.7
 # ipykernel==6.29.4
@@ -140,3 +141,4 @@ s3transfer==0.10.2
 
 # Security
 validators==0.28.3
+gunicorn
