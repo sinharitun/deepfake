@@ -1,4 +1,4 @@
-.land-cont{
+/* .land-cont{
     color: #fff;
     background-image: url('/background.gif');
     background-size: cover;
@@ -7,11 +7,73 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+} */
+.land-cont {
+    color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #0f0f1d;
+  overflow: hidden;
+  padding: 0 40px;
+  z-index: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+
+}
+
+.bg-circuits::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.05),
+    rgba(0, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  animation: moveCircuit 30s linear infinite;
+  z-index: 0;
+}
+@keyframes moveCircuit {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200px 200px;
+  }
+}
+/* Left visual with animation */
+.left-visual {
+  width: 50%;
+  max-width: 600px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ai-lottie {
+  width: 100%;
+  max-width: 400px;
+}
+
+.ai-tagline {
+  color: #00ffe1;
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: center;
 }
 .land-content{
     position: absolute;
     top: 0;
-    right: 0; 
+    right: 50px; 
     height: 100%; 
     width: 50%; 
     max-width: 700px; 
@@ -20,15 +82,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: flex-end; 
-    gap: 30px; 
+    align-items: center; 
+    gap: 40px; 
     text-align: right;
 }
 h1{
     font-size: 5rem;
+    color: #9be7ff;
+    text-shadow: 1px 2px 5px #9be7ff;
 }
 h2{
     font-size: 2.44rem;
+    color: #9be8ffd9;
 }
 p{
     font-size: 1.6rem;
@@ -63,14 +128,14 @@ p{
     }
 
     .land-content {
-        
+        right: 0;
         width: auto;
         border-radius: 20px;
         align-items: center;
         text-align: center; 
         position: relative; 
         max-width: none;
-        gap: 60px;
+        gap: 20px;
     }
 
     h1 {
@@ -113,4 +178,38 @@ p{
         font-size: 0.9rem;
         padding: 8px 20px;
     }
+}
+@media (max-width: 768px) {
+  .land-cont {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .left-visual,
+  .land-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .land-content h1 {
+    font-size: 3rem;
+  }
+
+  .land-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .land-content p {
+    font-size: 1rem;
+  }
+
+  .ai-lottie {
+    margin-top: 20px;
+    max-width: 200px;
+  }
+
+  .try-button {
+    font-size: 1rem;
+  }
 }

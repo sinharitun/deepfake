@@ -49,7 +49,7 @@ class DeepFakeModel(nn.Module):
 
 # Load model
 model = DeepFakeModel().to(device)
-model_path = "E:/deepfake/backend/deepfake_backend/models/model_93_acc_100_frames_celeb_FF_data.pt"  # Update your path here
+model_path = "E:/deepfake/deepfake_backend/models/model_93_acc_100_frames_celeb_FF_data.pt"  # Update your path here
 model.load_state_dict(torch.load(model_path, map_location=device))
 model.eval()
 
